@@ -7,6 +7,19 @@ class Company(models.Model):
     telegram = models.URLField(verbose_name='Telegram')
     whatsapp = models.URLField(verbose_name='Whatsapp')
 
+    @property
+    def job_amount(self):
+        return self.jobs.count()
+    
+    @property
+    def event_amount(self):
+        return self.events.count()
+    
+    @property
+    def video_amount(self):
+        return self.video.count()
+
+
 class Jobs(models.Model):
     position = models.CharField(max_length=127)
     salary = models.CharField(max_length=127)
