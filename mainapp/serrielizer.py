@@ -41,4 +41,3 @@ class CompanySerializer(serializers.ModelSerializer):
             'description', 'telegram', 'whatsapp',
             'video', 'events', 'jobs', 
         )
-
